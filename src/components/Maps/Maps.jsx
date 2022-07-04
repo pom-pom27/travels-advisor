@@ -1,7 +1,6 @@
 import { Box, Paper, Typography, useMediaQuery } from "@material-ui/core";
 import { LocationOnOutlined } from "@material-ui/icons";
-import GoogleMapReact, { Coords, NESWBounds } from "google-map-react";
-import { Hotel } from "../../data/types/hotel";
+import GoogleMapReact from "google-map-react";
 
 import useStyles from "./styles";
 
@@ -25,7 +24,7 @@ const Maps = ({
   return (
     <Box className={classes.mapContainer}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyDGGwJDn6RzE3Lr9TBpcLYz8rc2I8JrNho" }}
+        bootstrapURLKeys={{ key: "API_KEY" }}
         center={latLong}
         defaultCenter={latLong}
         yesIWantToUseGoogleMapApiInternals
